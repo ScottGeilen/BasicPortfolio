@@ -60,7 +60,7 @@
 }
 .wrapper-main {
 	background-color: #dbdbdb;
-	padding: 0px 50px 50px 50px;
+	padding: 0px 50px 100px 50px;
 }
 .form-signup {
 	display: block;
@@ -127,11 +127,22 @@ button:hover {
 	cursor: pointer;
 }
 footer {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 	margin: auto;
 	background-color: #111;
 	color: white;
 	text-align: center;
+}
+.resume-header {
+	text-align: center;
+	width: 100%;
+}
+.resume-title-location {
+	font-style: italic;
+}
+.resume-list {
+	font-size: 15px;
+	margin-left: 40px;
 }

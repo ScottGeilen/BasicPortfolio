@@ -23,9 +23,11 @@
                 <!-- post method to protect sensitive data-->
                 <?php
                     if (isset($_SESSION['userId'])) {
-                        echo '<form action="includes/logout.inc.php" method="post"></form>
-                        <a href="includes/logout.inc.php">Logout</a>
-                    </form>';
+                        echo '
+                        <form action="includes/logout.inc.php" method="post"></form>
+                            <a href="includes/logout.inc.php">Logout</a>
+                        </form>
+                        <p class="loggedin">Hello, '.$_SESSION['userUid'].'. You are logged in!</p>';
                     } else {
                         echo '
                         <form action="includes/login.inc.php" method="post" class="form">
