@@ -1,0 +1,137 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.navbar { 
+	background-color: #cfcfcf;
+	text-align: center;
+	justify-content: center;
+	display: block;
+	overflow: auto;
+	width: 100%;
+	margin: 0;
+}
+.navbar ul {
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: #eeeeee;
+	  display: flex;
+	  float: left;
+}
+.navbar li {
+	text-align: center;
+	width: 100%;
+}
+.navbar li a {
+  	display: flex;
+	text-decoration: none;
+	text-align: center;
+	padding: 20px;
+  	color: #000000;
+  	background-color: #b4b4b4;
+}
+.navbar li a:hover {
+  background-color: #ff9f29;
+  cursor: pointer;
+}
+.loginputs {
+	display: flex;
+	float: right;
+} 
+@media handheld {
+    .img-banner {
+        display: none;
+    }
+} 
+.form-signup {
+	background-color: #2b7243;
+	text-align: center;
+	display: flex;
+}
+.inputtext {
+	width: 100%;
+	height: 40px;
+	display: inline-block;
+}
+.loginout {
+	background-color: #722b2b;
+}
+.wrapper-main {
+	background-color: #dbdbdb;
+	padding: 0px 50px 50px 50px;
+}
+.form-signup {
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	background-color: #a5a5a5;
+}
+.success {
+	color: #ffffff;
+	background: #48ff00;
+	border: 1px solid #1100ff;
+	margin-bottom: 20px;
+} 
+.loggedin {
+	color: #ffffff;
+	background: #48ff00;
+	margin-bottom: 10px;
+	text-align: center;
+
+} 
+.loggedout {
+	color: #ffffff;
+	background: #ff0000;
+	padding: 10px;
+	text-align: center;
+} 
+button {
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	background: #ff8400;
+	border: none;
+	border-radius: 5px;
+}
+.error {
+	width: 92%;
+	margin: 0px auto;
+	padding: 10px;
+	border: 1px solid #a94442;
+	color: #a94442;
+	background: #f2dede;
+	border-radius: 5px;
+	text-align: left;
+}
+/* .login-submit {
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	background: #ff8400;
+	border: none;
+	border-radius: 5px;
+} */
+button {
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	background: #ff8400;
+	border: none;
+	border-radius: 5px;
+}
+button:hover {
+	color: #000000;
+	background: #ff9e37;
+	cursor: pointer;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin: auto;
+	background-color: #111;
+	color: white;
+	text-align: center;
+}
