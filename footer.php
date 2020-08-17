@@ -14,5 +14,6 @@
                 <li>Phone: (603) 715-4466</li>
                 <li>Email: scottgeilen99@gmail.com</li>
         </footer>
+        <script src="app.js"></script>
     </body>
 </html>
