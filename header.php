@@ -13,7 +13,6 @@
     <body>
         <header>
             <div class="navbar">
-                <a href="https://ibb.co/Y29ZvTT" alt="logo" class="logo"></a>
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="resume.php">Resume</a></li>
@@ -30,12 +29,14 @@
                         <p class="loggedin">Hello, '.$_SESSION['userUid'].'. You are logged in!</p>';
                     } else {
                         echo '
-                        <form action="includes/login.inc.php" method="post" class="form">
-                            <input type="text" name="emailuid" placeholder="Username/Email">
-                            <input type="password" name="pwd" placeholder="Password">
-                            <button type="submit" name="login-submit" placeholder="Login">Login</button>
-                        </form>
-                        <a href="signup.php">Sign up</a>';
+                        <div class="login-signup-div">
+                            <form action="includes/login.inc.php" method="post" class="form">
+                                <input type="text" name="emailuid" placeholder="Username/Email">
+                                <input type="password" name="pwd" placeholder="Password">
+                                <button type="submit" name="login-submit" placeholder="Login">Login</button>
+                            </form>
+                            <a href="signup.php" class="signup">Sign up</a>
+                        </div>';
                     }
                 ?>
             </div>

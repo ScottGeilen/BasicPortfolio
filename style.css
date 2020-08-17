@@ -2,49 +2,70 @@
 	margin: 0px;
 	padding: 0px;
 }
+header {
+	height: 10%;
+	background-color: #292929;
+	display: flex;
+}
+.section {
+	display: flex;
+}
 .navbar { 
-	background-color: #cfcfcf;
+	font-weight: bolder;
 	text-align: center;
 	justify-content: center;
-	display: block;
+	display: flex;
 	overflow: auto;
 	width: 100%;
 	margin: 0;
+	height: 100%;
 }
 .navbar ul {
   	list-style-type: none;
   	margin: 0;
   	padding: 0;
   	overflow: hidden;
-  	background-color: #eeeeee;
-	  display: flex;
-	  float: left;
+	display: flex;
+	float: right;
 }
 .navbar li {
 	text-align: center;
+	float: right;
 	width: 100%;
 }
 .navbar li a {
   	display: flex;
 	text-decoration: none;
 	text-align: center;
-	padding: 20px;
-  	color: #000000;
-  	background-color: #b4b4b4;
+	padding: 30px;
+  	color: #ffffff;
 }
 .navbar li a:hover {
-  background-color: #ff9f29;
+  background-color: #ff8c00;
   cursor: pointer;
 }
 .loginputs {
 	display: flex;
 	float: right;
 } 
+.signup {
+	text-decoration: none;
+	color: white;
+}
+.signup:hover {
+	color: #ff8c00;
+}
 @media handheld {
     .img-banner {
         display: none;
-    }
+	}
+	header {
+		height: 500px;
+	}
 } 
+.login-signup-div {
+	display: inline-block;
+}
 .form-signup {
 	background-color: #2b7243;
 	text-align: center;
@@ -60,13 +81,16 @@
 }
 .wrapper-main {
 	background-color: #dbdbdb;
-	padding: 0px 50px 100px 50px;
+	height: 100%;
 }
 .form-signup {
 	display: block;
 	text-align: center;
 	padding: 14px 16px;
 	background-color: #a5a5a5;
+}
+main {
+	height: 100%;
 }
 .success {
 	color: #ffffff;
@@ -75,17 +99,19 @@
 	margin-bottom: 20px;
 } 
 .loggedin {
-	color: #ffffff;
-	background: #48ff00;
+	color: #00c010;
+	font-weight: bolder;
 	margin-bottom: 10px;
 	text-align: center;
 
 } 
 .loggedout {
-	color: #ffffff;
-	background: #ff0000;
+	color: #ff0000;
+	font-weight: bolder;
 	padding: 10px;
 	text-align: center;
+	height: 100%;
+	vertical-align: auto;
 } 
 button {
 	padding: 10px;
