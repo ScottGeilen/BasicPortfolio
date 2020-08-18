@@ -13,13 +13,13 @@
     <body>
         <header>
             <nav>
-                <div class="logo">
+                <div class="logo nav-div">
                     <h3>ScottDev</h1>
                 </div>
                 <?php
                     $activePage = basename($_SERVER['PHP_SELF'], ".php");
                 ?>
-                <ul class="nav-links">
+                <ul class="nav-links nav-div">
                     <li class="<?php echo ($activePage == "index.php" ? "nav-active" : "")?>"></li><a href="index.php">Home</a>
                     <li class="<?php echo ($activePage == "index.php" ? "nav-active" : "")?>"></li><a href="resume.php">Resume</a>
                     <li class="<?php echo ($activePage == "index.php" ? "nav-active" : "")?>"></li><a href="about.php">About</a>
@@ -30,26 +30,25 @@
                     if (isset($_SESSION['userId'])) {
                         echo '
                         <form action="includes/logout.inc.php" method="post"></form>
-                            <a class="logout" href="includes/logout.inc.php">Logout</a>
+                            <a class="logout nav-div-div" href="includes/logout.inc.php">Logout</a>
                         </form>
                         <p class="loggedin">Hello, '.$_SESSION['userUid'].'. You are logged in!</p>';
                     } else {
                         echo '
-                        <form action="includes/login.inc.php" method="post" class="form">
+                        <form action="includes/login.inc.php" method="post" class="form nav-div">
                             <input type="text" name="emailuid" placeholder="Username/Email">
                             <input type="password" name="pwd" placeholder="Password">
                             <button type="submit" name="login-submit" placeholder="Login">Login</button>
                         </form>
-                        <a href="signup.php" class="signup">Sign up</a>';
+                        <a href="signup.php" class="signup nav-div">Sign up</a>';
                     }
                 ?>
-                <div class="burger">
+                <div class="burger nav-div">
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
             </nav>
-            <script></script>
         </header>
     </body>
 </html>
