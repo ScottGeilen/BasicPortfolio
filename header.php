@@ -5,50 +5,66 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="This is meta description and shows up in search results."
+        <meta name="description" content="This is meta description and shows up in search results.">
+        <script src="app.js" defer></script>
         <meta name=viewport content="width=device-width, initial-scale=1">
-        <title></title>
+        <title>Scott Geilen</title>
         <Link rel="stylesheet" href="style.css">
+        <?php
+            $activePage = basename($_SERVER['PHP_SELF'], ".php");
+        ?>
     </head>
     <body>
         <header>
-            <nav>
-                <div class="logo nav-div">
-                    <h3>ScottDev</h1>
+            <nav class="navbar">
+                <div class="logo">Scott Geilen</div>
+                <div class="navbar-links">
+                    <ul>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="resume.php">Resume</a></li>
+                        <li><a href="projects.php">Projects</a></li>
+                    </ul>
                 </div>
-                <?php
-                    $activePage = basename($_SERVER['PHP_SELF'], ".php");
-                ?>
-                <ul class="nav-links nav-div">
+                <!-- <ul class="nav-links nav-div">
                     <li class="<?php echo ($activePage == "index.php" ? "nav-active" : "")?>"></li><a href="index.php">Home</a>
-                    <li class="<?php echo ($activePage == "index.php" ? "nav-active" : "")?>"></li><a href="resume.php">Resume</a>
-                    <li class="<?php echo ($activePage == "index.php" ? "nav-active" : "")?>"></li><a href="about.php">About</a>
-                </ul>
+                    <li class="<?php echo ($activePage == "resume.php" ? "nav-active" : "")?>"></li><a href="resume.php">Resume</a>
+                    <li class="<?php echo ($activePage == "about.php" ? "nav-active" : "")?>"></li><a href="about.php">About</a>
+                </ul> -->
                 <!-- links to verification-->
                 <!-- post method to protect sensitive data-->
                 <?php
                     if (isset($_SESSION['userId'])) {
                         echo '
-                        <form action="includes/logout.inc.php" method="post"></form>
-                            <a class="logout nav-div-div" href="includes/logout.inc.php">Logout</a>
-                        </form>
-                        <p class="loggedin">Hello, '.$_SESSION['userUid'].'. You are logged in!</p>';
-                    } else {
-                        echo '
-                        <form action="includes/login.inc.php" method="post" class="form nav-div">
-                            <input type="text" name="emailuid" placeholder="Username/Email">
-                            <input type="password" name="pwd" placeholder="Password">
-                            <button type="submit" name="login-submit" placeholder="Login">Login</button>
-                        </form>
-                        <a href="signup.php" class="signup nav-div">Sign up</a>';
-                    }
-                ?>
-                <div class="burger nav-div">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
+                <div class="nav-account">
+                    <p class="loggedin">'.$_SESSION['userUid'].' is logged in!</p>
+                    <form action="includes/logout.inc.php" method="post">
+                        <a class="logout" href="includes/logout.inc.php">Logout</a>
+                    </form>
                 </div>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
             </nav>
+                ';
+                } else {
+                    echo '
+            <div class="nav-account">
+                <form action="includes/login.inc.php" method="post">
+                    <input type="text" name="emailuid" placeholder="Username/Email">
+                    <input type="password" name="pwd" placeholder="Password">
+                    <button type="submit" name="loginout-button" placeholder="Login">Login</button>
+                </form>
+            </div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
         </header>
+                ';}
+                ?>
     </body>
 </html>
