@@ -11,11 +11,21 @@
                     echo '
             <h1>PROJECTS</h1>
             <p>Github: </p><section class="section-div">
-            <h2>What is your hourly wage?</h2>
-            $<input type="number" name="wage" placeholder="Hourly wage">
-            <input type="number" name="hours" placeholder="Hours worked">hours
-            Next paycheck: <input type="date" name="date" placeholder="date">
-            <button type="submit" name="wage-submit" placeholder="Submit wage">Submit</button>
+            <section class="section-div">
+                <h2>What is your hourly wage?</h2>
+                <section class="section-div-div">
+                    $<input type="number" name="wage" placeholder="Hourly wage">
+                </section>
+                <section class="section-div-div">
+                    <input type="number" name="hours" placeholder="Hours worked">hours
+                </section>
+                <section class="section-div-div">
+                    Next paycheck: <input type="date" name="date" placeholder="date">
+                </section>
+                <section class="section-div-div">
+                    <button type="submit" name="wage-submit" placeholder="Submit wage">Submit</button>
+                </section>
+            </section>
         </section>
         <section class="section">
             <h1>My name is Scott Geilen</h1>
@@ -24,11 +34,10 @@
         <section class="section">
             <h1>Why?</h1>
             <p>I made this website!</p>
-        </section>
-            ';
-        } else {
+                    ';
+                } else {
                     echo '
-            <section id="logged-out">
+            <section class="logged-out">
                 <h2>You are logged out!</h2>
                 <a href="signup.php" class="signup nav-div">Sign up</a>
             </section>';

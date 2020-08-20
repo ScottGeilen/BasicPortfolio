@@ -24,7 +24,7 @@
                 ';
                 } else {
                     echo '
-            <section id="logged-out">
+            <section class="logged-out">
                 <h2>You are logged out!</h2>
                 <a href="signup.php" class="signup nav-div">Sign up</a>
             </section>
@@ -32,7 +32,6 @@
             ?>
         </section>
     <div>
-    
 </main>
 <?php
     require "footer.php";
