@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['loginout-button'])) {
+if (isset($_POST['loginbutton'])) {
     // legitimacy check
     require 'dbhandler.inc.php';
     $emailuid = $_POST['emailuid'];

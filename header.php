@@ -13,11 +13,11 @@
         <?php
             $activePage = basename($_SERVER['PHP_SELF'], ".php");
         ?>
+        
     </head>
     <body>
         <header>
-            <nav class="navbar">
-                <section class="nav-section">
+            <div class="nav-section">
                     <div class="logo">
                         <h2>Scott Geilen</h2>    
                     </div>
@@ -33,16 +33,19 @@
                     ';
                     } else {
                         echo '
-                    <div class="nav-account">
-                        <form action="includes/login.inc.php" method="post">
-                            <input type="text" name="emailuid" placeholder="Username/Email">
-                            <input type="password" name="pwd" placeholder="Password">
-                            <button type="submit" name="loginout-button" placeholder="Login">Login</button>
+                    <div class="nav-account"
+                        <form class="login-form" action="includes/login.inc.php" method="post">
+                            <div class="login-div">
+                                <input type="text" name="emailuid" placeholder="Username/Email">
+                                <input type="password" name="pwd" placeholder="Password">
+                            </div>
+                            <button class="loginbutton" type="submit" name="loginbutton" placeholder="Login">Login</button>
                         </form>
                     </div>
                 ';}
                 ?>
-                </section>
+                </div>
+            <nav class="navbar">
                 <div class="navbar-links">
                     <ul>
                         <li><a href="index.php">Home</a></li>
@@ -51,12 +54,12 @@
                         <li><a href="projects.php">Projects</a></li>
                     </ul>
                 </div>
-                <a href="#" class="toggle-button">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </a>
             </nav>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
         </header>
     </body>
 </html>

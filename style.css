@@ -28,7 +28,7 @@ body {
 header {
 	height: 100%;
 	width: 250px;
-	background-color: #f8f8f8;
+	background-color: #000097;
 	padding: 0;
 	margin: 0;
 }
@@ -39,35 +39,54 @@ header {
 	position: relative;
 	flex-flow: column wrap;
 	align-items: center;
-	color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
 }
 button {
-	padding: 10px;
-	color: white;
-	background: #0000b1;
+	width: 50px;
+	text-align: center;
+	color: rgb(0, 0, 0);
+	background-color: #fafafa;
+	/* background: #161616; */
 	border: none;
 	border-radius: 5px;
+	transition: all 0.5s ease 0s;
 }
 button:hover {
-	background: #2323ff;
+	/* background: #2f2f2f; */
 	cursor: pointer;
+	background-color: #ff6d0b;
+	color: white;
 }
 .logo {
 	font-size: 1.2rem;
 	margin: .5rem;
 	display: flex;
 	text-align: center;
-	color: #0000b1;
+	color: #ffffff;
+	transition: all 0.5s ease 0s;
 }
-.logo a:hover {
-	color: #2323ff;
+.logo:hover {
+	color: #ff6d0b;
+}
+.logo h2 {
+	font-weight: small;
 }
 .nav-account {
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
-	align-content: center;
+	align-items: center;
 	/*background-color: #0004ff;*/
+}
+.nav-account button {
+	margin: 0px 60px 0px 60px;
+	padding: 5px 10px 5px 10px;
+}
+.login-div {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-content: center;
 }
 .loggedin {
 	color: #00c010;
@@ -79,16 +98,17 @@ button:hover {
 	color: #000000;
 	text-decoration: none;
 	float: right;
+	font-weight: 1px;
 }
 .logout:hover {
-	color: #0000b1;
+	color: #181818;
 	font-weight: bolder;
 }
 .navbar-links ul {
-	margin: 0;
-	padding: 0;
 	display: flex;
 	flex-flow: column;
+	margin: 0;
+	padding: 0;
 }
 .navbar-links li {
 	list-style: none;
@@ -99,7 +119,7 @@ button:hover {
 	width: 100%;
 }
 .navbar-links a {
-	color: #000000;
+	color: #ffffff;
 	padding: 1rem;
 	text-decoration: none;
 	display: block;
@@ -108,16 +128,19 @@ button:hover {
 	transition: all 0.5s ease 0s;
 }
 .navbar-links a:hover {
-	color: #0000b1;
-	font-weight: bolder;
+	color: #ff6d0b;
 }
-.loginoutbutton {
+.loginbutton {
 	padding: 10px;
 	color: white;
-	background: #0000b1;
+	background: #000000;
 	border: none;
 	border-radius: 5px;
-} 
+}
+.loginbutton {
+	width: 50px;
+	height: 25px;
+}
 .toggle-button {
 	position: absolute;
 	top: .75rem;
@@ -131,7 +154,7 @@ button:hover {
 .toggle-button .bar {
 	height: 3px;
 	width: 100%;
-	background-color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
 	border-radius: 10px;
 }
 @media (max-width: 800px) {
@@ -144,7 +167,7 @@ button:hover {
 	header {
 		height: 60px;
 		width: 100%;
-		background-color: #f8f8f8;
+		background-color: #000097;
 	}
 	.nav-section {
 		display: flex;
@@ -152,7 +175,6 @@ button:hover {
 		height: 100%;
 	}
 	.navbar {
-		padding-left: 20px;
 		display: flex;
 		flex-flow: row;
 	}
@@ -161,26 +183,47 @@ button:hover {
 	}
 	.navbar-links {
 		display: none;
-		width: 100%;
 	}
 	.navbar {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: flex-end;
 	}
 	.navbar-links ul {
-		width: 100%;
-		flex-direction: column;
-		background-color: #f8f8f8;
+		display: flex;
+		align-content: center;
+		
+		width: 150px;
+		padding-right: 10px;
 	}
 	.navbar-links li {
-		text-align: center;
+		display: flex;
+		flex-flow: column;
+		align-content: center;
+		background-color: #000097;
+		border: solid white;
+		border-radius: 25px;
+		transition: all 0.5s ease 0s;
+	}
+	.navbar-links li:hover {
+		border-color: #ff6d0b;
 	}
 	.navbar-links li a {
 		padding: .5rem 1rem;
 	}
 	.navbar-links.active {
 		display: flex;
+	}
+	.nav-account {
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+		margin: 10px;
+	}
+	.nav-account button {
+		margin: 0;
+		padding: 0;
+		padding: 5px 10px 5px 10px;
 	}
 }
 
@@ -200,20 +243,30 @@ form {
 	flex-flow: column wrap;
 	align-items: center;
 }
+
+
+
+
+
 .signup {
 	display: flex;
 	flex-flow: column wrap;
 	align-items: center;
 	text-decoration: none;
-	color: black;
+	color: #000000;
 	font-weight: bolder;
 	width: 100%;
 	text-align: center;
 	transition: all 0.5s ease 0s;
+	padding: 5px 10px 5px 10px;
 }
 .signup:hover {
-	color: #0000b1;
+	color: #ff6d0b;
 }
+
+
+
+
 .icon {
 	display: none;
 	width: 25px;
@@ -226,63 +279,23 @@ form {
 	text-align: center;
 	display: flex;
 }
-/* @media (max-width: 600px) {
-	.navbar-links ul {
-		position: absolute;
-		right: 0px;
-		height: 24vh;
-		top: 15vh;
-		background-color: #e7e7e7;
-		transform: translateX(100%);
-		transition: transform 0.5s ease-in;
-		opacity: .9;
-		border-radius: 0px 0px 0px 25px;
-		width: 50%;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-}
-@keyframes navLinkFade {
-	from {
-		opacity: 0;
-		transform: translateX(50px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0px);
-	}
-}
-
-@media handheld {
-    .img-banner {
-        display: none;
-	}
-	header {
-		height: 500px;
-	}
-} */
-/* .inputtext {
-	width: 100%;
-	height: 40px;
-	display: inline-block;
-} */
-
 main {
 	margin: 0px;
 	padding: 5%;
 	width: 100%;
+	height: 100%;
 
 	display: flex;
 	flex-wrap: column wrap;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 80px;
 }
 	.wrapper-main {
-		background-color: #c8c8c8;
-		box-shadow: 5px 5px #444444;
+		background-color: #cecece;
+		border: solid #000097 4px;
+		border-radius: 25px;
+		padding: 20px;
 		height: 100%;
 		width: 100%;
 		
@@ -297,14 +310,20 @@ main {
 			display: flex;
 			flex-flow: column;
 			justify-content: center;
+			text-align: center;
 			width: 100%;
+			height: 100%;
 		}
 		.section {
 			display: flex;
 			flex-flow: column wrap;
 			justify-content: center;
 			align-items: center;
+			height: 100%;
 			/*background-color: #ff0000;*/
+		}
+		.section input {
+			width: 100%;
 		}
 		.section h1 {
 			color: black;
@@ -351,20 +370,24 @@ main {
 	width: 92%;
 	margin: 0px auto;
 	padding: 10px;
-	border: 1px solid #a94442;
-	color: #a94442;
+	border: 1px solid #ff0400;
+	color: #ff0400;
 	background: #f2dede;
 	border-radius: 5px;
 	text-align: left;
 }
 
 footer {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	height: 80px;
 	margin: auto;
-	background-color: #e7e7e7e7;
-	color: #000000;
+	background-color: #000097;
+	color: #ffffff;
 	text-align: center;
 }
 .resume-header {

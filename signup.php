@@ -4,6 +4,7 @@
 <main>
     <div class="wrapper-main">
         <section class="section" id="signup">
+            <div class="error">
             <?php
                 switch (isset($_GET['error'])) {
                     case 'emptyfields':
@@ -33,27 +34,29 @@
                 <input type="password" name="pwd-repeat" placeholder="Repeat password" class="inputtext">
                 <button type="submit" name="signup-submit">Submit signup</button>
             </form> -->
-            <form class='section' action="includes/signup.inc.php" method="post">
-                <h1>Signup</h1>
-                <div>
-                    <label>Username</label>
-                    <input type="text" name="uid" placeholder="Username" class="inputtext">
-                </div>
-                <div>
-                    <label>Email</label>
-                    <input type="text" name="email" placeholder="Email" class="inputtext">
-                </div>
-                <div>
-                    <label>Password</label>
-                    <input type="password" name="pwd" placeholder="Password" class="inputtext">
-                </div>
-                <div>
-                    <label>Repeat password</label>
-                    <input type="password" name="pwd-repeat" placeholder="Repeat password" class="inputtext">
-                </div>
-                <div>
-                    <button type="submit" name="signup-submit">Submit signup</button>
-                </div>
+            <section class="section">
+                <form action="includes/signup.inc.php" method="post">
+                    <h1>Signup</h1>
+                    <div>
+                        <label>Username</label>
+                        <input type="text" name="uid" placeholder="Username" class="inputtext">
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="text" name="email" placeholder="Email" class="inputtext">
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input type="password" name="pwd" placeholder="Password" class="inputtext">
+                    </div>
+                    <div>
+                        <label>Repeat password</label>
+                        <input type="password" name="pwd-repeat" placeholder="Repeat password" class="inputtext">
+                    </div>
+                    <div>
+                        <button class="button" type="submit" name="signup-submit">Submit signup</button>
+                    </div>
+                </form>
             </section>
         </section>
     <div>
