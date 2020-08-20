@@ -16,7 +16,7 @@
                     echo '
         <section class="logged-out">
             <h2>You are logged out!</h2>
-            <a href="signup.php" class="signup nav-div">Sign up</a>
+            <a href="signup.php" class="signup">Sign up</a>
         </section>';
             }
         ?>

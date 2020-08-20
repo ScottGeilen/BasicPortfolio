@@ -34,6 +34,7 @@
                 <button type="submit" name="signup-submit">Submit signup</button>
             </form> -->
             <form class='section' action="includes/signup.inc.php" method="post">
+                <h1>Signup</h1>
                 <div>
                     <label>Username</label>
                     <input type="text" name="uid" placeholder="Username" class="inputtext">

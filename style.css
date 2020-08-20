@@ -211,6 +211,9 @@ form {
 	text-align: center;
 	transition: all 0.5s ease 0s;
 }
+.signup:hover {
+	color: #0000b1;
+}
 .icon {
 	display: none;
 	width: 25px;
@@ -344,14 +347,6 @@ main {
 				align-content: center;
 				/*background-color: #fbff05;*/
 			}
-			
-button {
-	padding: 10px;
-	color: white;
-	background: #ff8400;
-	border: none;
-	border-radius: 5px;
-}
 .error {
 	width: 92%;
 	margin: 0px auto;
