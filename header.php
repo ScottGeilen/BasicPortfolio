@@ -1,6 +1,3 @@
-</php
-    session_start();
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +10,11 @@
         <?php
             $activePage = basename($_SERVER['PHP_SELF'], ".php");
         ?>
-        
+        <script>
+            function why() {
+                document.getElementById("why").innerHTML = "You'll get to view Scott Geilen's software development skills that will help your business!";
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -35,11 +36,9 @@
                         echo '
                     <div class="nav-account"
                         <form class="login-form" action="includes/login.inc.php" method="post">
-                            <div class="login-div">
-                                <input type="text" name="emailuid" placeholder="Username/Email">
-                                <input type="password" name="pwd" placeholder="Password">
-                            </div>
-                            <button class="loginbutton" type="submit" name="loginbutton" placeholder="Login">Login</button>
+                            <input type="text" name="emailuid" placeholder="Username/Email">
+                            <input type="password" name="pwd" placeholder="Password">
+                            <button class="loginbutton" type="submit" value="submit" name="loginbutton" placeholder="Login">Login</button>
                         </form>
                     </div>
                 ';}

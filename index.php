@@ -15,9 +15,10 @@
         } else {
                     echo '
         <section class="logged-out">
-            <h2>You are logged out!</h2>
+            <h2 id="why">You are logged out!</h2>
             <a href="signup.php" class="signup">Sign up</a>
-        </section>';
+        </section>
+        <button type="button" onclick="why()">Why?</button>';
             }
         ?>
     </div>
